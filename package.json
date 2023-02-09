@@ -11,6 +11,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@wordpress/scripts": "^25.3.0"
+		"@wordpress/scripts": "^25.3.0",
+		"normalize.css": "^8.0.1"
 	}
 }
