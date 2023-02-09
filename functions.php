@@ -12,7 +12,15 @@ if(!function_exists('add_settings')) {
 
 }
 
+// Register menu
+if(!function_exists('add_custom_menu')) {
+
+  function add_custom_menu() {
+    register_nav_menu('main-menu', __('Main Menu'));  
+  }
+}
 
 
 add_theme_support('title-tag');
+add_action('init', "add_custom_menu");
 add_action('init', 'add_settings');
