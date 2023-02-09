@@ -6,5 +6,19 @@
   </head>
   <body>
 
+    <header>
+    <nav>
+      <div>
+        <a href="<?php echo site_url('') ?>">Hello</a>
+
+        <?php 
+          wp_nav_menu(array(
+            'theme_location' => 'main-menu',
+          ));
+        ?>
+      </div>
+    </nav>
+  </header>
+  
 
   
