@@ -6,10 +6,10 @@
   </head>
   <body>
 
-    <header>
+  <header>
     <nav>
-      <div>
-        <a href="<?php echo site_url('') ?>">Hello</a>
+      <div class="container nav__menu">
+        <a class="nav__menu__logo" href="<?php echo site_url('') ?>">Blogo</a>
 
         <?php 
           wp_nav_menu(array(
@@ -19,6 +19,4 @@
       </div>
     </nav>
   </header>
-  
-
   
