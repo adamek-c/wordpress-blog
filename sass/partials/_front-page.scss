@@ -1,0 +1,92 @@
+@use "./colors" as *;
+@use "./typhography" as *;
+@use "./mixin" as *;
+
+.entrance {
+	padding-block: 4rem;
+	text-align: center;
+
+	&__title {
+		@include text($black, $font-xxl, $fw-700, $ff-w);
+		&__span {
+			color: $green;
+		}
+	}
+
+	&__text {
+		@include text($black-text, $font-basic, $fw-500, $ff-w);
+		margin: auto;
+		max-width: 50rem;
+		padding-top: 0.75rem;
+	}
+}
+
+.box {
+	margin-top: 5rem;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+
+	&__img {
+		flex: 1;
+		width: 20%;
+		object-fit: contain;
+	}
+}
+
+.introduce {
+	flex: 1;
+
+	&__title {
+		@include text($green, $font-xl, $fw-600, $ff-a);
+	}
+
+	&__text {
+		@include text($black-text, $font-basic, $fw-400, $ff-w);
+		padding-top: 0.75rem;
+	}
+}
+
+.counter {
+	margin-top: 5rem;
+	display: flex;
+	justify-content: space-between;
+
+	&__amout {
+		@include text($green, $font-xl, $fw-700, $ff-w);
+		text-align: center;
+	}
+
+	&__text {
+		@include text($black-text, $font-basic, $fw-500, $ff-w);
+	}
+}
+
+.slider {
+	margin-top: 5rem;
+
+	&__title {
+		@extend .introduce__title;
+	}
+}
+
+.follow {
+	&__title {
+		@include text($black-text, $font-basic, $fw-500, $ff-w);
+		margin-top: 5rem;
+		text-align: center;
+	}
+
+	&__collections {
+		margin-top: 0.75rem;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: 1fr;
+
+		&__img {
+			max-width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
