@@ -1,0 +1,19 @@
+@use "./typhography" as *;
+@use "./colors" as *;
+@use "./mixin" as *;
+
+footer {
+	background-color: $black;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 2rem;
+	padding-inline: 1rem;
+
+	& > * {
+		@include text($white, $font-small, $fw-500, $ff-a);
+	}
+}

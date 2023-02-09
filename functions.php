@@ -23,4 +23,4 @@ if(!function_exists('add_custom_menu')) {
 
 add_theme_support('title-tag');
 add_action('init', "add_custom_menu");
-add_action('init', 'add_settings');
+add_action('wp_enqueue_scripts', 'add_settings');

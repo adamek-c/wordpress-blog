@@ -1,7 +1,5 @@
-<?php
+<?php get_header(); ?>
 
-get_header();
+Hello from index.php
 
-
-
-get_footer();
+<?php get_footer(); ?>
