@@ -64,9 +64,54 @@
 
 .slider {
 	margin-top: 5rem;
+	overflow-x: hidden;
 
 	&__title {
 		@extend .introduce__title;
+	}
+
+	&__container {
+		margin-top: 0.75rem;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		height: 500px;
+		gap: 1rem;
+
+		&__item {
+			transition: all 0.5s ease;
+			min-width: 60%;
+			background-color: $black;
+		}
+	}
+
+	&__arrows {
+		margin-top: 1.4rem;
+		display: flex;
+		justify-content: center;
+		gap: 1.3rem;
+
+		&__item {
+			border: 0.0625rem solid $black-text;
+			padding-inline: 1.5rem;
+			padding-block: 0.5rem;
+			cursor: pointer;
+			transition: all 0.2 ease-in;
+
+			&:hover {
+				background-color: $black-light;
+			}
+
+			&--left {
+				border-bottom-left-radius: 1rem;
+				border-top-left-radius: 1rem;
+			}
+
+			&--right {
+				border-bottom-right-radius: 1rem;
+				border-top-right-radius: 1rem;
+			}
+		}
 	}
 }
 
@@ -89,4 +134,8 @@
 			object-fit: cover;
 		}
 	}
+}
+
+.disabled {
+	opacity: 0.4;
 }
