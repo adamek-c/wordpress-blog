@@ -23,19 +23,19 @@
   <section>
     <div class="counter">
       <div>
-        <h5 class="counter__amout">900 tyś</h5>
+        <h5 class="counter__amout" data-count="time"><span id ="one"></span> tys</h5> 
         <span class="counter__text">Przemierzonych km</span>
       </div>
       <div>
-        <h5 class="counter__amout">20</h5>
+        <h5 class="counter__amout" data-count="time"><spna id ="two"></spna></h5>
         <span class="counter__text">Odwiedzonych miejsc na świecie</span>
       </div>
       <div>
-       <h5 class="counter__amout">300</h5>
+       <h5 class="counter__amout" data-count="time"><span id ="three"></span></h5>
        <span class="counter__text">Nowo poznanych przyjaciół</span>
       </div>
       <div>
-        <h5 class="counter__amout">180 tyś</h5>
+        <h5 class="counter__amout" data-count="time"><span id ="four"></span> tys</h5>
         <span class="counter__text">Godziny w drodze</span>
       </div>
     </div>
