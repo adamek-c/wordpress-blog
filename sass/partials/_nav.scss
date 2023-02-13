@@ -2,12 +2,11 @@
 @use "./typhography" as *;
 
 .nav__menu {
+	padding-bottom: 1rem;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	align-items: center;
-	padding-block: 2em;
-	padding-inline: 1em;
 	border-bottom: 0.0625em solid $black-light;
 
 	&__logo {

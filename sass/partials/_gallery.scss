@@ -1,0 +1,39 @@
+.gallery {
+	display: flex;
+	gap: 1rem;
+
+	&__item {
+		cursor: pointer;
+		height: 400px;
+		width: 100%;
+		background-color: rgb(17, 17, 16);
+	}
+}
+
+.modal {
+	display: none;
+	position: absolute;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.643);
+
+	&__close {
+		position: inherit;
+		top: 10%;
+		right: 30%;
+		cursor: pointer;
+	}
+
+	&__picture {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		height: 500px;
+		width: 500px;
+		background-color: aliceblue;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.active {
+	display: block;
+}
