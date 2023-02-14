@@ -28,8 +28,24 @@ if(!function_exists('featured_images')) {
   }
 }
 
+if(!function_exists('my_sidebar')) {
+
+  function my_sidebar() {
+    register_sidebar(array(
+      'name' => __('Sidebar', 'blog-theme'),
+      'id' => 'sidebar-1',
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		  'after_widget'  => '</aside>',
+      'descritpion' => 'A simple sidebar'
+    ));
+  }
+
+}
+
+
 
 add_theme_support('title-tag');
 add_action('init', "add_custom_menu");
 add_action('wp_enqueue_scripts', 'add_settings');
 add_action('after_setup_theme', 'featured_images');
+add_action('widgets_init', 'my_sidebar');
