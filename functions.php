@@ -20,7 +20,16 @@ if(!function_exists('add_custom_menu')) {
   }
 }
 
+if(!function_exists('featured_images')) {
+  function featured_images() {
+    add_theme_support('post-thumbnails');
+    add_image_size('post-thumbnails', 300, 400);
+
+  }
+}
+
 
 add_theme_support('title-tag');
 add_action('init', "add_custom_menu");
 add_action('wp_enqueue_scripts', 'add_settings');
+add_action('after_setup_theme', 'featured_images');
