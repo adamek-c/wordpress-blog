@@ -1,0 +1,38 @@
+@use "./colors" as *;
+
+.blog {
+	display: flex;
+	justify-content: space-between;
+
+	&__content {
+		width: 70%;
+
+		.page {
+		}
+
+		&__paginate {
+			margin-top: 1rem;
+
+			.current {
+				background-color: $green;
+				color: $white;
+			}
+
+			.page-numbers {
+				padding-inline: 0.7rem;
+				padding-block: 0.5rem;
+				border: 0.0625rem solid $black-light;
+				transition: all 0.1s ease-in;
+
+				&:hover:not(.current) {
+					background-color: $black;
+					color: $white;
+				}
+			}
+
+			> a {
+				color: $black-text;
+			}
+		}
+	}
+}
