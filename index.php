@@ -1,5 +1,12 @@
 <?php get_header(); ?>
 
-Hello from index.php
+  <div class="container">
+    <div>
+      <div></div>
+      <div>
+        <?php get_sidebar();?>
+      </div>
+    </div>
+  </div>
 
 <?php get_footer(); ?>
