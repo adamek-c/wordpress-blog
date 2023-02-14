@@ -3,11 +3,42 @@
 .blog {
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-start;
 
 	&__content {
 		width: 70%;
 
-		.page {
+		&__info {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+
+			&:not(:last-child) {
+				margin-top: 2.5rem;
+			}
+
+			&__title {
+				@include text($green-black, $font-xl, $fw-600, $ff-a);
+			}
+
+			&__text {
+				@include text($black-text, $font-basic, $fw-400, $ff-w);
+			}
+
+			&__link {
+				@include text($green, $font-small, $fw-600, $ff-w);
+				display: inline-block;
+				margin-top: 1rem;
+				padding-inline: 1rem;
+				padding-block: 0.5rem;
+				border: 0.0625rem solid $black-light;
+				transition: all 0.1s ease-in;
+
+				&:hover {
+					background-color: $green;
+					color: $white;
+				}
+			}
 		}
 
 		&__paginate {

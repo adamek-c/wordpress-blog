@@ -6,7 +6,6 @@
 		cursor: pointer;
 		height: 400px;
 		width: 100%;
-		background-color: rgb(17, 17, 16);
 	}
 }
 
@@ -14,7 +13,7 @@
 	display: none;
 	position: absolute;
 	inset: 0;
-	background-color: rgba(0, 0, 0, 0.643);
+	background-color: $black-modal;
 
 	&__close {
 		position: inherit;
@@ -29,7 +28,6 @@
 		top: 50%;
 		height: 500px;
 		width: 500px;
-		background-color: aliceblue;
 		transform: translate(-50%, -50%);
 	}
 }
