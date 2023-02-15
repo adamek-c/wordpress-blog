@@ -24,7 +24,7 @@ if(!function_exists('featured_images')) {
   function featured_images() {
     add_theme_support('post-thumbnails');
     add_image_size('post-thumbnails', 300, 400);
-
+    add_image_size('post-thumbnails_xl', 300, 400); 
   }
 }
 
