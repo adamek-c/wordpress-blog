@@ -1,0 +1,26 @@
+@use "./colors" as *;
+@use "./typhography" as *;
+@use "./mixin" as *;
+
+.single-post {
+	display: flex;
+	justify-content: space-between;
+
+	&__content {
+		width: 70%;
+
+		&__title {
+			@include text($green-black, $font-xxl, $fw-600, $ff-a);
+			margin-bottom: 1.5rem;
+		}
+
+		&__text {
+			@include text($black-text, $font-basic, $fw-400, $ff-w);
+			margin-top: 1.5rem;
+
+			&::first-letter {
+				text-transform: uppercase;
+			}
+		}
+	}
+}
