@@ -23,6 +23,10 @@
 
 			&__text {
 				@include text($black-text, $font-basic, $fw-400, $ff-w);
+
+				&::first-letter {
+					text-transform: uppercase;
+				}
 			}
 
 			&__link {
