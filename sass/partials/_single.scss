@@ -11,7 +11,8 @@
 
 		&__title {
 			@include text($green-black, $font-xxl, $fw-600, $ff-a);
-			margin-bottom: 1.5rem;
+			margin-bottom: 1rem;
+			display: inline-block;
 		}
 
 		&__text {
