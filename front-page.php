@@ -45,11 +45,29 @@
     <div class="slider">
       <h2 class="slider__title">Najpiękniejsze miejsca według mnie</h2>
       <div class="slider__container">
-        <div class="slider__container__item"></div>
-        <div class="slider__container__item" style="background-color: orange;"></div>
-        <div class="slider__container__item" style="background-color: red;"></div>
-        <div class="slider__container__item" style="background-color: pink;"></div>
-        <div class="slider__container__item" style="background-color: purple;"></div>
+        <?php 
+        $places = new WP_Query(array(
+          'post_type' => 'places',
+          'posts_per_page' => 5,
+          'post_status' => 'publish',
+          'orderby' => 'date',
+          'order' => 'DESC',
+        ));
+
+          if($places->have_posts()) : ?>
+            <?php 
+              while($places->have_posts()) : $places->the_post() ?>
+              <div class="slider__container__item">
+                <a href="<?php the_permalink();?>">
+                  <?php the_post_thumbnail(); ?>
+                  <span class="slider__container__item__background">
+                    <span><?php the_title(); ?></span>
+                  </span>
+                </a>
+              </div>
+            <?php endwhile;
+          endif; 
+        ?>
       </div>
       <div class="slider__arrows">
         <span class="slider__arrows__item slider__arrows__item--left" data-left="left-arrow">
