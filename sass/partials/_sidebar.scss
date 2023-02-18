@@ -5,7 +5,6 @@
 .sidebar {
 	position: sticky;
 	top: 1.2rem;
-	width: 30%;
 	padding: 1rem;
 
 	&__places {
@@ -61,6 +60,21 @@
 
 		li:not(:last-child) {
 			margin-bottom: 0.5rem;
+		}
+	}
+
+	&__info {
+		h4 {
+			@include text($green-black, $font-basic, $fw-600, $ff-a);
+		}
+
+		p {
+			@include text($black-text, $font-basic, $fw-400, $ff-w);
+			margin-top: 0.75rem;
+		}
+
+		blockquote > p > strong {
+			@include text($green, $font-basic, $fw-400, $ff-w);
 		}
 	}
 }

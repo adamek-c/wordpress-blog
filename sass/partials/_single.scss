@@ -6,11 +6,26 @@
 	display: flex;
 	justify-content: space-between;
 
+	&--gap {
+		gap: 3rem;
+		align-items: flex-start;
+	}
+
 	&__content {
 		width: 70%;
 
+		&--width {
+			min-width: 70%;
+		}
+
 		&__title {
 			@include text($green-black, $font-xxl, $fw-600, $ff-a);
+			margin-bottom: 1rem;
+			display: inline-block;
+		}
+
+		&__time {
+			@include text($black-text, $font-basic, $fw-400, $ff-a);
 			margin-bottom: 1rem;
 			display: inline-block;
 		}
