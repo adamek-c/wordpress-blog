@@ -9,9 +9,9 @@
             if('post' === get_post_type()) { ?>
             <div class="single-post__content__category">
               <?php
-                $categorys = get_the_category();
-                if ($categorys) {
-                  foreach($categorys as $tag) {
+                $categories = get_the_category();
+                if ($categories) {
+                  foreach($categories as $tag) {
                     echo '#'. $tag->name . ' '; 
                   }
                 }

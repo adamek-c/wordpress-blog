@@ -26,8 +26,17 @@
 
 		&__time {
 			@include text($black-text, $font-basic, $fw-400, $ff-a);
-			margin-bottom: 1rem;
 			display: inline-block;
+			margin-bottom: 0.5rem;
+		}
+
+		&__category,
+		&__tags {
+			@include text($black-text, $font-small, $fw-500, $ff-a);
+		}
+
+		&__tags {
+			margin-bottom: 1rem;
 		}
 
 		&__text {
