@@ -38,6 +38,13 @@ if(!function_exists('my_sidebar')) {
 		  'after_widget'  => '</aside>',
       'descritpion' => 'A simple sidebar'
     ));
+
+     register_sidebar(array(
+      'name' => __('Places', 'blog-theme'),
+      'id' => 'sidebar-places', 
+      'before_widget' => '<div class="sidebar__info">',
+		  'after_widget'  => '</div>',
+    ));
   }
 
 }
