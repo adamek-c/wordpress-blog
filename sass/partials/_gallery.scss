@@ -1,13 +1,18 @@
 @use "./colors" as *;
 
 .gallery {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	gap: 1rem;
 
 	&__item {
 		cursor: pointer;
-		height: 400px;
-		width: 100%;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
 	}
 }
 
