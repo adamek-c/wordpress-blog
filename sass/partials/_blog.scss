@@ -1,4 +1,6 @@
 @use "./colors" as *;
+@use "./typhography" as *;
+@use "./mixin" as *;
 
 .blog {
 	display: flex;

@@ -3,13 +3,23 @@
   <section>
     <div class="container">
       <div class="gallery">
-        <div class="gallery__item" data-gallery="modal" >
-          <img src="<?php echo get_theme_file_uri('assets/img/aten.jpg')?>">
-        </div>
-        <div class="gallery__item" data-gallery="modal">
-          <img src="<?php echo get_theme_file_uri('assets/img/grece.jpg')?>">
-        </div>
-        
+        <?php 
+          $blogposts = new WP_Query(array(
+              'post_type' => 'post',
+              'post_status' => 'publish',
+              'orderby' => 'date',
+              'order' => 'DESC',
+            ));
+
+          if($blogposts->have_posts()) : ?>
+          <?php
+            while($blogposts->have_posts()) : $blogposts->the_post(); ?>
+              <div class="gallery__item" data-gallery="modal" >
+                <?php the_post_thumbnail();  ?>
+              </div>
+          <?php endwhile;
+          endif;  
+        ?>
       </div>
     </div>
   </section>
