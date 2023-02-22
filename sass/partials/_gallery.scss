@@ -18,14 +18,14 @@
 
 .modal {
 	display: none;
-	position: absolute;
+	position: fixed;
 	inset: 0;
 	background-color: $black-modal;
 
 	&__close {
 		position: inherit;
 		top: 10%;
-		right: 30%;
+		right: 20%;
 		cursor: pointer;
 	}
 
@@ -33,8 +33,8 @@
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		height: 500px;
-		width: 500px;
+		max-height: 43.75rem;
+		max-width: 50rem;
 		transform: translate(-50%, -50%);
 	}
 }
